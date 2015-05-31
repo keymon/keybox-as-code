@@ -1,0 +1,4 @@
+# vim:ft=ansible:
+
+- name: sudo
+  src:  https://github.com/keymon/ansible-sudo.git

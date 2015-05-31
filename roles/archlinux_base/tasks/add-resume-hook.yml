@@ -1,0 +1,12 @@
+---
+# https://wiki.archlinux.org/index.php/Suspend_and_Hibernate#Recreate_initial_ramdisk
+# allows hibernate/resume to be used
+- name: "add resume hook to mkinitcpio.conf"
+  replace:
+    dest: "/etc/mkinitcpio.conf"
+    regexp: "block filesystems"
+    replace: "block resume filesystems"
+  register: "hook_added"
+- name: "rebuild kernel"
+  shell: "mkinitcpio -p linux"
+  when: "hook_added|changed"

@@ -1,0 +1,5 @@
+---
+# Fixes problem using gnupg.
+# https://bbs.archlinux.org/viewtopic.php?id=190380
+- shell: mkdir -p /root/.gnupg/ && touch /root/.gnupg/dirmngr_ldapservers.conf
+

@@ -1,0 +1,11 @@
+[archlinux:children]
+levono_w530
+
+[archlinux:vars]
+# Required to make ansible work with Arch
+# See: https://github.com/ansible/ansible/issues/6212
+ansible_python_interpreter='/usr/bin/python2' 
+
+[levono_w530]
+keytocho ansible_ssh_host=192.168.0.15
+

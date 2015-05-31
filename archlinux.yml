@@ -1,0 +1,7 @@
+---
+- name: Configure Archlinux Desktop
+  hosts: archlinux
+  roles:
+    - base
+      #    - my_users
+

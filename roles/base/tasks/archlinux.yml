@@ -1,0 +1,8 @@
+---
+# Update the cache at the beginning.
+- pacman: update_cache=yes
+
+# Install all the packages:
+- pacman: name={{item}} state=latest
+  with_items: common_linux_packages + extra_common_linux_packages + archlinux_packages + extra_archlinux_packages
+

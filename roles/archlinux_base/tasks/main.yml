@@ -1,0 +1,12 @@
+---
+- include: hacks_and_workarounds.yml
+- include: add-resume-hook.yml
+
+#- include: install-global-npm-packages.yml
+#- include: configure-refind.yml
+
+#- include: configure-dhcpcd.conf.yml
+#- include: configure-tlp.yml
+- include: configure-keyboard.yml
+#- include: configure-virtualbox.yml
+

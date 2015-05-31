@@ -1,0 +1,23 @@
+---
+dependencies:
+  - role: sudo
+    sudo_users:
+    - name: '%admin'
+      nopasswd: yes
+
+  - role: archlinux_packages
+    when: ansible_distribution == "Archlinux"
+  - role: archlinux_base
+    when: ansible_distribution == "Archlinux"
+
+galaxy_info:
+  author: Hector Rivas
+  description: A wrapper role to setup a basic linux node
+  license: MIT
+  min_ansible_version: 1.8
+
+  platforms:
+    - name: ArchLinux
+  categories:
+    - system
+
