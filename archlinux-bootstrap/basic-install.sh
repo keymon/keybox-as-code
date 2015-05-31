@@ -21,7 +21,7 @@ SCRIPT_NAME=$0
 
 usage() {
 	cat <<EOF
-Bootstraps the archlinux system on my Lenovo X530.
+Bootstraps the archlinux system on my Lenovo w530.
 
 Prereqs, start the SSH daemon and set a default password with:
 
@@ -98,6 +98,7 @@ mount /dev/sda1 /mnt/boot
 pacstrap /mnt base
 pacstrap /mnt grub grub-bios os-prober
 pacstrap /mnt openssh
+pacstrap /mnt python2 # required for ansible 
 
 # configure basic stuff
 genfstab -p /mnt >> /mnt/etc/fstab
